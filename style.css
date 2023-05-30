@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,400;1,500&display=swap");
+*{
+    font-family: "Besley",serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s all linear; 
+
+}
+*::selection{
+    background: var(--main);
+    color: white;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+     
+}
+section{
+    padding: 2rem 7%;
+}
+
+:root{
+    --main:#f01027;
+    --box_shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.3);
+    
+}
+.btn{
+    background: var(--main);
+    cursor: pointer;
+    color: aliceblue;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.7rem;
+    border-radius: 1rem;
+}
+.btn:hover {
+    letter-spacing: 0.2rem;
+}
+.heading {
+    font-size: 4rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 3.5rem;
+}
+.heading span{
+    color: #f01027;
+}
+/* navbar styling */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 9%;
+
+}
+.header .logo img{
+    height: 6rem;
+    padding: 1px;
+    margin-left: 0px;
+}
+.header .navbar a{
+    color: aliceblue;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+
+}
+.header .navbar a:hover{
+    color: var(--main);
+}
+#menuBars{
+    color: aliceblue;
+    font-size: 2.5rem;
+    display: none;
+    cursor: pointer;
+}
+
+.home{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
+    url("assets/cfbf5b7faa3639aca57116ff8decf41d\ \(1\).jpg");
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    display: flex;
+     align-items: center;
+}
+.home .content{
+max-width: 60rem;
+color: aliceblue;
+}
+.home .content h3{
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+.home .content p{
+    font-weight: lighter;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #ccc;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.about .row .img {
+    flex: 1 1 45rem;
+    padding: 1rem;
+}
+
+.about .row .img img{
+    width: 75%;
+    border: 1rem solid #f01027;
+    border-radius: 0.6rem;
+}
+.about .row .content{
+    flex: 1 1 45rem;
+}
+
+.about .content h3 {
+    font-size: 3.5rem;
+}
+.about .content p{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 2;
+}
+
+/* events section styling */
+.events {
+    margin-bottom: 200px;
+}
+.events .boxContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
+    gap: 2.5rem;
+}
+.events .boxContainer .box {
+    background: #222;
+    text-align: center;
+    padding: 4.5rem;
+    border-radius: 0.5rem;
+    color: aliceblue;
+}
+.events .boxContainer .box:hover h3{
+    transform: scale(1.2)
+    translatey(-15px)
+}
+.events .boxContainer .box h3{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+.events .boxContainer .box p{
+    font-size: 1.4rem;
+    color: #ccc;
+}
+
+
+
+.gallery{
+    margin-bottom: 200px;
+}
+.gallery .boxContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem,1fr));
+    gap: 1.5rem;
+}
+.gallery .boxContainer .box{
+    position: relative;
+    border-radius: 0.5rem;
+    border: 1rem solid var(--main);
+    overflow: hidden;
+    cursor: pointer;
+    height: 25rem;
+}
+.gallery .boxContainer .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.gallery .boxContainer .box .title {
+    position: absolute;
+    top: -10rem;
+    left: 0;
+    right: 0;
+    background: #f01027;
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    color: aliceblue;
+}
+.gallery .boxContainer .box:hover .title{
+    top: 0;
+}
+.gallery .boxContainer .box .icons{
+    position: absolute;
+    bottom: -10rem;
+    left: 0;
+    right: 0;
+    background: transparent;
+    text-align: center;
+    padding: 1rem;
+}
+.gallery .boxContainer .box:hover .icons{
+    bottom: 0;
+}
+.gallery .boxContainer .box .icons a{
+    color: aliceblue;
+    margin: 0.5rem 1rem;
+    font-size: 2rem;
+}
+.gallery .boxContainer .box .icons a:hover{
+    color: #222;
+}
+
+
+
+.contact {
+    margin-bottom: 200px;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+
+}
+
+.contact form .inputBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact .inputBox input, .contact textarea {
+    width: 100%;
+    background: black;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    text-transform: none;
+    color: white;
+    font-size: 1.5rem;
+    margin: 0.7rem 0;
+}
+
+.contact .inputBox input::placeholder, .contact textarea::placeholder {
+color: #eee;
+text-transform: capitalize;
+}
+.contact .inputBox input:focus, .contact textarea:focus {
+    background: #222;
+    }
+.contact .inputBox input{
+    width: 49%;
+}
+
+@media(max-width:1024px){
+    html{
+        font-size: 50%;
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+    .about .row .img img{
+        width: 100%;
+        border: 1rem solid #f01027;
+        border-radius: 0.6rem;
+    }
+
+
+}
+@media(max-width:768px){
+    #menuBars{
+        display: inline;
+    }
+     .header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 0.2rem solid #222;
+        background: black;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        
+
+    } 
+    .home{
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+    .home .content h3{
+        font-size: 3.5rem;
+    }
+    .home .content p {
+        font-size: 1.5rem;
+    }
+
+}
+@media(max-width:450px){
+     html{
+        font-size: 50%;
+     }
+     .contact form .inputBox input{
+        width: 100%;
+     }
+}
